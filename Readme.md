@@ -1,5 +1,6 @@
  # Water Softener Salt Pellet Fullness Detector
-<img src="/espmon.jpg" alt="Dial 1" title="Dial 1" width="10%"/>
+<img src="/esp-mon.png" alt="Dial 1" title="Dial 1" width="30%"/>
+
 ## Project Overview
 This repository hosts the code and documentation for an IoT-based Water Softener Salt Pellet Fullness Detector. The project leverages an ESP8266 microcontroller in conjunction with an ultrasonic sensor, utilizing ESPHome for easy configuration and management of the device. It's designed to monitor the salt level in a water softener tank and alert when refills are needed.
 
