@@ -1,0 +1,43 @@
+esphome:
+  name: Softener Monitor
+
+esp8266:
+  board: esp01_1m  # Specifies the ESP8266 board model
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+  password: "4e779583a9d9aee19562359b935403c6"  # OTA update password
+
+wifi:
+  ssid: "NOT PROVIDED"  # WiFi network name
+  password: "password"  # WiFi password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Salt Fallback Hotspot"  # Fallback hotspot name
+    password: "password"  # Fallback hotspot password
+
+captive_portal:
+
+sensor:
+  - platform: ultrasonic
+    trigger_pin: GPIO12  # Trigger pin for ultrasonic sensor
+    echo_pin: GPIO14  # Echo pin for ultrasonic sensor
+    name: "Ultrasonic Sensor 2"
+    update_interval: 30s  # Frequency of sensor data updates
+    accuracy_decimals: 3  # Number of decimal places for sensor values
+    #force_update: true
+    timeout: 3m  # Maximum time to wait for sensor response
+    filters:
+      - sliding_window_moving_average:
+          window_size: 20  # Size of the moving average window
+          send_every:  10  # Interval to send averaged values
+      - median:
+          window_size: 20  # Size of the median filter window
+          send_every: 10  # Interval to send median values
+          send_first_at: 1  # When to send the first filtered value
