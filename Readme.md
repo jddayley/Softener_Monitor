@@ -16,7 +16,8 @@ This repository hosts the code and documentation for an IoT-based Water Softener
 - Power Supply for ESP8266
 - Connecting Wires
 - Mounting Hardware for Sensor
-
+ <img src="/sonic.jpg" alt="Dial 1" title="Dial 1" width="10%"/>
+ <img src="/esp.jpg" alt="Dial 1" title="Dial 1" width="10%"/>
 ## Software Requirements
 - ESPHome
 - Arduino IDE (optional for initial flashing)
